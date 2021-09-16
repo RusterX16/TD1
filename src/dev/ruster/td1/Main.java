@@ -28,9 +28,9 @@ public class Main {
     public static void swap() {
         int a = 10, b = 3;
 
-        int temps = a;
+        int temp = a;
         a = b;
-        b = temps;
+        b = temp;
 
         System.out.println("a » " + a);
         System.out.println("b » " + b);
