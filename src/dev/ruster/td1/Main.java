@@ -7,7 +7,7 @@ public class Main {
     private static final Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        streak_limit();
+        fibonacci();
     }
 
     public static void first_one() {
@@ -105,6 +105,25 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             u_n += i + 1;
+            System.out.println("n » " + (i + 1) + " | U(n) » " + u_n);
+        }
+    }
+
+    public static void fibonacci() {
+        int n, u_n = 0, u_1 = 0, u_2 = 1;
+
+        do {
+            System.out.print("Choisissez un entier : ");
+            n = scan.nextInt();
+        } while(n < 0);
+
+        System.out.println("n » 1 | U(n) » " + u_1);
+        System.out.println("n » 2 | U(n) » " + u_2);
+
+        for(int i = 2; i < n; i++) {
+            u_n += u_1 + u_2;
+            u_1 = u_2;
+            u_2 = u_n;
             System.out.println("n » " + (i + 1) + " | U(n) » " + u_n);
         }
     }
